@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    
+
     <!-- Primary SEO Meta Tags -->
     <title>NEGGUS HOTEL | A Quiet Luxury Sanctuary in Calabar, Nigeria</title>
     <meta name="title" content="NEGGUS HOTEL | A Quiet Luxury Sanctuary in Calabar, Nigeria" />
@@ -17,7 +17,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://neggushotel.com/" />
 
@@ -212,12 +212,18 @@
             {
               "@type": "ListItem",
               "position": 4,
+              "name": "Dining & Bar",
+              "item": "https://neggushotel.com/#dining"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
               "name": "Experience Calabar",
               "item": "https://neggushotel.com/#experience"
             },
             {
               "@type": "ListItem",
-              "position": 5,
+              "position": 6,
               "name": "Contact",
               "item": "https://neggushotel.com/#contact"
             }
@@ -241,6 +247,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "NEGGUS Hotel offers 24/7 front desk service, luxury suites and rooms, a 24/7 bar and dining, high-speed Wi-Fi, air conditioning, 24/7 uninterrupted power supply, and secure parking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does NEGGUS Hotel have a restaurant and bar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, NEGGUS Hotel features an on-site Restaurant & Bar serving authentic Calabar delicacies like Afang Soup, Egusi Soup with swallow, spicy Isi Ewu, flame-grilled chicken, fresh fish and meat pepper soup, alongside chilled beers, spirits, and 24/7 in-room dining."
               }
             },
             {
@@ -548,6 +562,132 @@
             }
         }
 
+        /* Dining stacked photo composition with Polaroid-style frames */
+        .dining-photos-stack {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/5;
+        }
+
+        .dining-photos-stack .polaroid-item {
+            position: absolute;
+            background: #ffffff;
+            padding: 8px 8px 28px 8px;
+            box-shadow: 0 10px 30px rgba(6, 27, 14, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.5s ease,
+                        z-index 0.5s ease;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 640px) {
+            .dining-photos-stack .polaroid-item {
+                padding: 10px 10px 34px 10px;
+                box-shadow: 0 14px 36px rgba(6, 27, 14, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+            }
+        }
+
+        .dining-photos-stack .polaroid-item:hover {
+            transform: scale(1.05) translateY(-4px);
+            box-shadow: 0 24px 50px rgba(6, 27, 14, 0.20), 0 4px 12px rgba(0, 0, 0, 0.08);
+            z-index: 40 !important;
+        }
+
+        .dining-photos-stack .polaroid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background-color: theme('colors.surface-container');
+        }
+
+        /* Hero image — large, anchors the composition */
+        .dining-photos-stack .dish-hero {
+            top: 0;
+            left: 0;
+            width: 62%;
+            height: 58%;
+            z-index: 1;
+        }
+
+        /* Stacked on the right, offset down */
+        .dining-photos-stack .dish-right-top {
+            top: 6%;
+            right: 0;
+            width: 42%;
+            height: 40%;
+            z-index: 2;
+        }
+
+        /* Overlapping bottom-left, tucked under hero */
+        .dining-photos-stack .dish-bottom-left {
+            bottom: 18%;
+            left: 4%;
+            width: 38%;
+            height: 34%;
+            z-index: 3;
+        }
+
+        /* Large bottom-right, anchors lower half */
+        .dining-photos-stack .dish-bottom-right {
+            bottom: 0;
+            right: 2%;
+            width: 55%;
+            height: 48%;
+            z-index: 2;
+        }
+
+        /* Small accent, overlapping center-right */
+        .dining-photos-stack .dish-accent {
+            top: 50%;
+            right: 28%;
+            width: 28%;
+            height: 24%;
+            z-index: 4;
+        }
+
+        /* Tucked into the lower-left corner */
+        .dining-photos-stack .dish-corner {
+            bottom: 2%;
+            left: 0;
+            width: 32%;
+            height: 28%;
+            z-index: 5;
+        }
+
+        @media (max-width: 768px) {
+            .dining-photos-stack {
+                aspect-ratio: 3/4;
+            }
+            .dining-photos-stack .dish-hero {
+                width: 58%;
+                height: 52%;
+            }
+            .dining-photos-stack .dish-right-top {
+                width: 46%;
+                height: 36%;
+            }
+            .dining-photos-stack .dish-bottom-right {
+                width: 58%;
+                height: 44%;
+            }
+            .dining-photos-stack .dish-accent {
+                width: 32%;
+                height: 22%;
+                right: 24%;
+            }
+            .dining-photos-stack .dish-corner {
+                width: 36%;
+                height: 26%;
+            }
+            .dining-photos-stack .dish-bottom-left {
+                width: 42%;
+                height: 30%;
+            }
+        }
+
         /* Experience slide layout */
         .experience-slide {
             display: grid;
@@ -631,6 +771,8 @@
             onclick="closeMobileMenu()">About</a>
         <a class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" href="#rooms"
             onclick="closeMobileMenu()">Rooms</a>
+        <a class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" href="#dining"
+            onclick="closeMobileMenu()">Dining &amp; Bar</a>
         <a class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors"
             href="#experience" onclick="closeMobileMenu()">Experience Calabar</a>
         <a class="font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors" href="#contact"
@@ -648,7 +790,8 @@
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-3 w-full max-w-container-max mx-auto">
             <!-- Brand Logo -->
             <a class="flex items-center gap-2" href="#" aria-label="NEGGUS HOTEL &amp; BAR Homepage">
-                <img class="h-10 w-auto object-contain" alt="NEGGUS Hotel &amp; Bar Logo" src="images/neggus-logo.png" width="160" height="40" />
+                <img class="h-10 w-auto object-contain" alt="NEGGUS Hotel &amp; Bar Logo" src="images/neggus-logo.png"
+                    width="160" height="40" />
             </a>
             <!-- Navigation Links (Desktop) -->
             <div class="hidden md:flex space-x-8 items-center">
@@ -656,6 +799,8 @@
                     href="#about">About</a>
                 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300"
                     href="#rooms">Rooms</a>
+                <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300"
+                    href="#dining">Dining &amp; Bar</a>
                 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300"
                     href="#experience">Experience Calabar</a>
                 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300"
@@ -689,10 +834,7 @@
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     src="images/hero-section.png"
                                     alt="NEGGUS Hotel building, serene green lawns and scenic surroundings in Calabar, Nigeria"
-                                    width="800"
-                                    height="600"
-                                    fetchpriority="high"
-                                    loading="eager" />
+                                    width="800" height="600" fetchpriority="high" loading="eager" />
                             </div>
                             <!-- Subtle Floating Badge -->
                             <div
@@ -742,11 +884,12 @@
                             </div>
                             <div>
                                 <span class="block font-headline-sm text-primary text-[18px] font-semibold">100%</span>
-                                <span class="font-body-md text-[13px] text-on-surface-variant">Quiet Luxury</span>
+                                <span class="font-body-md text-[13px] text-on-surface-variant">Secure Location</span>
                             </div>
                             <div>
-                                <span class="block font-headline-sm text-primary text-[18px] font-semibold">Prime</span>
-                                <span class="font-body-md text-[13px] text-on-surface-variant">Calabar Location</span>
+                                <span
+                                    class="block font-headline-sm text-primary text-[18px] font-semibold">Serene</span>
+                                <span class="font-body-md text-[13px] text-on-surface-variant">Environment</span>
                             </div>
                         </div>
                     </div>
@@ -785,23 +928,17 @@
                         <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
                             <img class="img-primary w-full h-full object-cover"
                                 alt="NEGGUS Hotel &amp; Bar exterior view during daytime in Calabar, Nigeria"
-                                src="images/about1.png"
-                                width="600"
-                                height="750"
-                                loading="lazy" />
+                                src="images/about1.png" width="600" height="750" loading="lazy" />
                         </div>
                         <img class="img-secondary" alt="NEGGUS Hotel &amp; Bar signage illuminated at night in Calabar"
-                            src="images/about2.jpg"
-                            width="330"
-                            height="440"
-                            loading="lazy" />
+                            src="images/about2.jpg" width="330" height="440" loading="lazy" />
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Rooms Section (Sliding Cards) -->
-        <section class="py-[120px] bg-surface-container-low w-full" id="rooms">
+        <section class="py-[120px] w-full" id="rooms" style="background-color: #eef3ee;">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-[60px] fade-in-up">
                     <h2 class="font-headline-md text-headline-md text-primary mb-4">Stay your way.</h2>
@@ -826,9 +963,7 @@
                                 <div class="w-full aspect-[3/4] overflow-hidden bg-surface-container mb-6 relative">
                                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         alt="The Sanctuary Suite — spacious luxury suite at NEGGUS Hotel Calabar"
-                                        width="600"
-                                        height="800"
-                                        loading="lazy"
+                                        width="600" height="800" loading="lazy"
                                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1bBs5McNZCnKS7AEB8YCDFrOz1g1bbSfHHxU5WFHVXOI0ek8LsNBNJGABWPQpsNKhMHpD9JSLXGTZDquvkTlC3naORxIeLmK5Nq7D4mL5t2nUCkow4PcIfNfZEVVxJITIYo8NevAT2Zy6SDadzCd5vbLUBMbxhBaSwK3O_Vil01B8pKY-ftFDTPONWb_-Di_hJHzD7_tEzu3nt6yP5et3YThwuPtJm-6aRjuBNHGYhDGZ9NjeAUH0zQ" />
                                 </div>
                                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">The Sanctuary Suite</h3>
@@ -848,10 +983,8 @@
                             <div class="group">
                                 <div class="w-full aspect-[3/4] overflow-hidden bg-surface-container mb-6 relative">
                                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                        alt="The Quiet Room — an intimate retreat at NEGGUS Hotel Calabar"
-                                        width="600"
-                                        height="800"
-                                        loading="lazy"
+                                        alt="The Quiet Room — an intimate retreat at NEGGUS Hotel Calabar" width="600"
+                                        height="800" loading="lazy"
                                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfrViukcsH4FM5W0p6RSNTpc-9DSqAQOFLFC3laJdxjYXtYh_R-oE516zHlq2_0mAx6pHtz_nKO6ppGSbdr2g3FpVmldBd7hDt9gT0Rwf_HmBiVGmvl7QQRQ7myT79O7F3sFfQrJ0b5Mi4D5wAv4Bq-UyxZPR2422ET_R-KBCtNWqVmgnIgDl7PoknZoXo0fdeVJAK4yxSku5QGND641fkieIWKD8v7Q0wBLOdu9fMwV6wrxNeMmbC-g" />
                                 </div>
                                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">The Quiet Room</h3>
@@ -872,9 +1005,7 @@
                                 <div class="w-full aspect-[3/4] overflow-hidden bg-surface-container mb-6 relative">
                                     <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                         alt="The Executive Lounge — premium accommodations at NEGGUS Hotel Calabar"
-                                        width="600"
-                                        height="800"
-                                        loading="lazy"
+                                        width="600" height="800" loading="lazy"
                                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpUY_nWyr3mt0MdoS3rWxaBU9SUSzdowphGkVWyD-jB-Cw46bKQToEwuU4VSjWQ6WlYVGN0g_H-3P2z3Lysx0QzIGS7x1bgO6TxvooLhTJEmagwKxTBN4Kjx7RSeQV2cCjN-cK1EAsPP7HdQtn-zIAAUcyH4k3AMpFdkZpxSFhSTTsh6a96SMQzhEnJDw0G5-treH785FioMiOlszTP-m-EGbHVsloThsBaU2-B-aiNiO4CQ3GPNJ8QQ" />
                                 </div>
                                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">The Executive Lounge
@@ -897,6 +1028,131 @@
                 </div>
             </div>
         </section>
+
+        <!-- Divider -->
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- Dining & Bar Section (Asymmetric Narrative + Asymmetric Meal Collage Showcase) -->
+        <section class="py-[120px] md:py-[160px] w-full bg-surface-container-low" id="dining">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                
+                <!-- Main Split: Narrative Left, Asymmetrical Collage Right -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mb-16 md:mb-20">
+                    
+                    <!-- Left: Culinary Story & Meal Summary -->
+                    <div class="md:col-span-5 fade-in-up">
+                        <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] mb-3 block">Gastronomy &amp; Libations</span>
+                        <h2 class="font-headline-md text-headline-md text-primary mb-6">The Neggus Restaurant &amp; Bar</h2>
+                        <div class="h-[1px] w-12 bg-primary-container opacity-20 mb-6"></div>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Experience Calabar's legendary gastronomy alongside contemporary comforts. Our kitchen prepares authentic Cross River delicacies fresh to order — from our signature waterleaf and wild <strong class="text-primary font-semibold">Calabar Afang Soup</strong> and golden <strong class="text-primary font-semibold">Royal Egusi Soup</strong> with warm swallow, to slow-simmered spicy <strong class="text-primary font-semibold">Isi Ewu</strong>, sizzling charcoal <strong class="text-primary font-semibold">Flame-Grilled Peppered Chicken</strong>, and steaming <strong class="text-primary font-semibold">Catfish &amp; Meat Pepper Soup</strong>. Unwind in our serene lounge bar with ice-cold premium beers, fine spirits, and handcrafted libations, or enjoy hot room service straight to your suite 24/7.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors uppercase tracking-[0.15em]"
+                                href="https://wa.me/2348037739055?text=Hello%20NEGGUS%20Hotel,%20I%20would%20like%20to%20view%20the%20dining%20menu%20or%20place%20an%20order"
+                                target="_blank" rel="noopener noreferrer">
+                                <span>Order From Restaurant</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stacked Photo Composition with Polaroid Frames -->
+                    <div class="md:col-span-6 md:col-start-7 fade-in-up" style="transition-delay: 200ms;">
+                        <div class="dining-photos-stack">
+                            <!-- Hero: Afang Soup (large, anchors top-left) -->
+                            <div class="polaroid-item dish-hero">
+                                <img src="images/afang.jpeg"
+                                    alt="Authentic Calabar Afang Soup served with Eba at NEGGUS Hotel"
+                                    width="600" height="750" loading="lazy" />
+                            </div>
+                            <!-- Right-top: Grilled Chicken (overlaps hero edge) -->
+                            <div class="polaroid-item dish-right-top">
+                                <img src="images/grilledchicken.png"
+                                    alt="Flame-Grilled Peppered Chicken at NEGGUS Hotel Bar"
+                                    width="400" height="533" loading="lazy" />
+                            </div>
+                            <!-- Accent: Isi Ewu (small, floats center) -->
+                            <div class="polaroid-item dish-accent">
+                                <img src="images/isiewu.jpg"
+                                    alt="Authentic Spicy Isi Ewu goat head delicacy at NEGGUS Hotel"
+                                    width="400" height="300" loading="lazy" />
+                            </div>
+                            <!-- Bottom-left: Pepper Soup (tucked under hero) -->
+                            <div class="polaroid-item dish-bottom-left">
+                                <img src="images/peppersoup.jpg"
+                                    alt="Fresh Fish and Meat Pepper Soup at NEGGUS Hotel"
+                                    width="400" height="400" loading="lazy" />
+                            </div>
+                            <!-- Bottom-right: Egusi Soup (anchors lower half) -->
+                            <div class="polaroid-item dish-bottom-right">
+                                <img src="images/egusi.jpg"
+                                    alt="Royal Egusi Soup with meat and swallow at NEGGUS Hotel"
+                                    width="600" height="450" loading="lazy" />
+                            </div>
+                            <!-- Corner: Beverages (tucked lower-left) -->
+                            <div class="polaroid-item dish-corner">
+                                <img src="images/beverages.png"
+                                    alt="Chilled beverages, spirits and drinks at NEGGUS Hotel Bar"
+                                    width="400" height="533" loading="lazy" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dining Highlights & Call to Action (Hard Corners, Quiet Luxury) -->
+                <div class="bg-surface p-6 md:p-10 border border-outline-variant/30 fade-in-up">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-left">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[20px]">room_service</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline-sm text-[16px] font-semibold text-primary mb-1">24/7 In-Room Dining</h4>
+                                <p class="font-body-md text-[13px] text-on-surface-variant">Hot meals and cold drinks delivered straight to your suite anytime.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-secondary text-white flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[20px]">soup_kitchen</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline-sm text-[16px] font-semibold text-primary mb-1">Authentic Calabar Spices</h4>
+                                <p class="font-body-md text-[13px] text-on-surface-variant">Prepared fresh to order with local aromatics and market-fresh ingredients.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-[20px]">local_bar</span>
+                            </div>
+                            <div>
+                                <h4 class="font-headline-sm text-[16px] font-semibold text-primary mb-1">Serene Bar Lounge</h4>
+                                <p class="font-body-md text-[13px] text-on-surface-variant">A calm ambiance to relax, socialize, watch sports, and enjoy chilled drinks.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <p class="font-body-md text-[14px] text-on-surface-variant">
+                            Have special dietary requests or planning a group meal reservation?
+                        </p>
+                        <a class="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary font-label-caps text-label-caps py-[14px] px-[28px] uppercase tracking-[0.15em] hover:bg-secondary transition-colors whitespace-nowrap"
+                            href="https://wa.me/2348037739055?text=Hello%20NEGGUS%20Hotel,%20I%20would%20like%20to%20order%20food%20or%20reserve%20a%20table%20at%20the%20Restaurant%20%26%20Bar"
+                            target="_blank" rel="noopener noreferrer">
+                            <span class="material-symbols-outlined text-[18px]">restaurant_menu</span>
+                            <span>Order Food / Reserve Table</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="section-divider"></div>
+        </div>
 
         <!-- Experience Calabar Section (Full-width Slider) -->
         <section class="py-[120px] md:py-[160px] w-full" id="experience">
@@ -927,10 +1183,7 @@
                                 <div class="overflow-hidden">
                                     <img class="slide-image"
                                         alt="Panoramic view of Calabar city landmarks with the Nigerian flag and Millennium Park"
-                                        src="images/calabar11-11.jpg"
-                                        width="640"
-                                        height="480"
-                                        loading="lazy" />
+                                        src="images/calabar11-11.jpg" width="640" height="480" loading="lazy" />
                                 </div>
                                 <div class="slide-content">
                                     <span
@@ -964,10 +1217,7 @@
                                 <div class="overflow-hidden">
                                     <img class="slide-image"
                                         alt="Tinapa Waterpark featuring thrilling water slides surrounded by tropical palm trees in Calabar"
-                                        src="images/tinapa-waterpark.webp"
-                                        width="640"
-                                        height="480"
-                                        loading="lazy" />
+                                        src="images/tinapa-waterpark.webp" width="640" height="480" loading="lazy" />
                                 </div>
                                 <div class="slide-content">
                                     <span
@@ -1000,10 +1250,7 @@
                                 <div class="overflow-hidden">
                                     <img class="slide-image"
                                         alt="Aerial view of Obudu Mountain Resort with chalets nestled among green hills above the clouds in Cross River State"
-                                        src="images/obudu-cr.jpg"
-                                        width="640"
-                                        height="480"
-                                        loading="lazy" />
+                                        src="images/obudu-cr.jpg" width="640" height="480" loading="lazy" />
                                 </div>
                                 <div class="slide-content">
                                     <span
@@ -1151,7 +1398,8 @@
             class="flex flex-col md:flex-row justify-between items-start gap-gutter w-full max-w-container-max mx-auto">
             <div class="flex flex-col gap-4">
                 <div class="flex items-center gap-3">
-                    <img src="images/neggus-logo.png" alt="NEGGUS Hotel &amp; Bar Official Logo" class="h-8 w-auto object-contain" width="128" height="32" loading="lazy" />
+                    <img src="images/neggus-logo.png" alt="NEGGUS Hotel &amp; Bar Official Logo"
+                        class="h-8 w-auto object-contain" width="128" height="32" loading="lazy" />
                 </div>
                 <p class="font-body-md text-body-md text-on-surface-variant">
                     © 2026 NEGGUS HOTEL & BAR. Hospitality at its finest — Calabar, Nigeria.

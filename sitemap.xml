@@ -40,6 +40,36 @@
             <image:title>Obudu Mountain Resort Cross River</image:title>
             <image:caption>Scenic mountain views and cable cars in Cross River State</image:caption>
         </image:image>
+        <image:image>
+            <image:loc>https://neggushotel.com/images/afang.jpeg</image:loc>
+            <image:title>Authentic Calabar Afang Soup and Eba at NEGGUS Hotel</image:title>
+            <image:caption>Signature Calabar Afang soup with assorted meats, stockfish, and periwinkles at NEGGUS Hotel Restaurant</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://neggushotel.com/images/grilledchicken.png</image:loc>
+            <image:title>Flame-Grilled Peppered Chicken at NEGGUS Hotel Bar</image:title>
+            <image:caption>Sizzling flame-grilled peppered chicken seasoned with local African spices at NEGGUS Hotel</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://neggushotel.com/images/isiewu.jpg</image:loc>
+            <image:title>Authentic Spicy Isi Ewu Goat Head Delicacy</image:title>
+            <image:caption>Traditional spicy Isi Ewu delicacy served in aromatic potash and utazi sauce at NEGGUS Hotel</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://neggushotel.com/images/egusi.jpg</image:loc>
+            <image:title>Royal Egusi Soup and Swallow at NEGGUS Hotel Restaurant</image:title>
+            <image:caption>Rich melon seed soup with garden greens, dried fish, and assorted meat cuts at NEGGUS Hotel</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://neggushotel.com/images/peppersoup.jpg</image:loc>
+            <image:title>Fresh Fish and Meat Pepper Soup at NEGGUS Hotel</image:title>
+            <image:caption>Fragrant, spicy herbal pepper soup broth infused with local aromatics at NEGGUS Hotel Calabar</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://neggushotel.com/images/beverages.png</image:loc>
+            <image:title>NEGGUS Hotel Bar and Lounge Chilled Libations</image:title>
+            <image:caption>Chilled beers, fine spirits, cocktails, and refreshments at NEGGUS Hotel Lounge Bar</image:caption>
+        </image:image>
     </url>
 
     <!-- Key Anchor Sections for Deep-Link Indexing -->
@@ -51,6 +81,12 @@
     </url>
     <url>
         <loc>https://neggushotel.com/#rooms</loc>
+        <lastmod>2026-08-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://neggushotel.com/#dining</loc>
         <lastmod>2026-08-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
