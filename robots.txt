@@ -1,0 +1,7 @@
+# Robots.txt for NEGGUS HOTEL & BAR (Calabar, Nigeria)
+# Allow all search engine crawlers (Google, Bing, Yahoo, DuckDuckGo, etc.)
+User-agent: *
+Allow: /
+
+# Sitemap specification
+Sitemap: https://neggushotel.com/sitemap.xml

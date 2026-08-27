@@ -1,0 +1,16 @@
+{
+  "name": "NEGGUS HOTEL & BAR - Calabar",
+  "short_name": "NEGGUS Hotel",
+  "description": "A Quiet Luxury Sanctuary in Calabar, Nigeria. 24/7 accommodation, bar and dining.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf9f6",
+  "theme_color": "#061b0e",
+  "icons": [
+    {
+      "src": "images/neggus-logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}
